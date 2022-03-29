@@ -1,0 +1,24 @@
+<div class="announcement {{ isDetails ? 'active' : '' }}">
+  <div class="announcement-nav">
+    <div class="announcement-nav-title">
+      {{ announcementItem.title }}
+    </div>
+    <div class="announcement-nav-menu">
+      <span (click)="showDetails()">{{
+        isDetails ? "Close details" : "Show details"
+        }}</span
+      ><mat-icon (click)="edit()">edit</mat-icon>
+      <mat-icon (click)="delete()">delete</mat-icon>
+    </div>
+  </div>
+
+  <div *ngIf="isDetails" class="announcement-description">
+    <div class="announcement-description-text">
+      {{ announcementItem.description }}
+    </div>
+    <span class="announcement-description-date">
+      <small *ngIf="announcementItem.isEdited">edited.</small>
+      {{ announcementItem.date | date: "d.MM.yy, H:mm" }}
+    </span>
+  </div>
+</div>

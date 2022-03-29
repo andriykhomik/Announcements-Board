@@ -1,0 +1,29 @@
+:host {
+  height: 60px;
+  background-color: var(--blue-color);
+  display: flex;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  &-logo {
+    user-select: none;
+    cursor: auto;
+  }
+  div {
+    margin: 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--dark-font-color);
+  }
+  &-git {
+    text-decoration: none;
+    color: var(--dark-font-color);
+    &:hover {
+      text-shadow: var(--text-shadow);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 28px;
+  width: 390px;
+  border-radius: 14px;
+  padding-left: 2px;
+  background-color: var(--bg-color);
+  color: var(--dark-font-color);
+  box-shadow: var(--box-shadow-hover);
+  & input {
+    height: 26px;
+    border-radius: 0 14px 14px 0;
+    width: 360px;
+    font-size: 18px;
+    background-color: var(--bg-color);
+    color: var(--dark-font-color);
+    border: none;
+    outline: none;
+  }
+}

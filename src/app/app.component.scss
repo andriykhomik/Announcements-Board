@@ -1,0 +1,16 @@
+.main {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  &-button {
+    margin: 20px;
+  }
+  &-empty {
+    width: 75vw;
+    padding: 100px;
+    font-size: 40px;
+    line-height: 42px;
+    color: var(--dangare);
+    text-align: center;
+  }
+}

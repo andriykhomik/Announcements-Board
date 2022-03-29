@@ -1,0 +1,28 @@
+<form class="form" [formGroup]="form" (ngSubmit)="submit()">
+  <h2 mat-dialog-title>Create your announcement</h2>
+  <mat-dialog-content class="mat-typography">
+    <h3 *ngIf="form.invalid">Fill all fields!</h3>
+    <div class="form-input">
+      <label for="title">Title</label>
+      <input id="title" type="text" formControlName="title" />
+    </div>
+    <div class="form-input">
+      <label for="details">Details</label>
+      <input id="details" type="text" formControlName="details" />
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button
+      mat-raised-button
+      mat-button
+      color="primary"
+      [mat-dialog-close]="true"
+      cdkFocusInitial
+      type="submit"
+      [disabled]="form?.invalid"
+    >
+      Create
+    </button>
+  </mat-dialog-actions>
+</form>
